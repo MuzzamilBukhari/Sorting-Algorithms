@@ -1,31 +1,6 @@
 #include<iostream>
 using namespace std;
 
-// Insertion Sort
-void insertionSort (int arr[], int size){  
-    for (int i = 1; i < size; i++) {
-        int hold = arr[i];
-        while (i>0 && hold<arr[i-1]){
-            arr[i] = arr[i-1];
-            i--;
-        }
-        arr[i] = hold;
-    }
-}
-
-// Bubble Sort
-void bubbleSort (int arr[], int size){
-    for (int j = 0; j < size; j++){
-        for (int i = 0; i < size-j-1;i++){
-            if (arr[i] > arr[i+1]){
-                int tmp = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = tmp;
-            }
-        }
-    }
-}
-
 // Selection Sort
 void selectionSort (int arr[], int size) {
     for (int i = 0; i < size-1;i++){
@@ -38,6 +13,31 @@ void selectionSort (int arr[], int size) {
         int tmp = arr[i];
         arr[i] = arr[mi];
         arr[mi] = tmp;
+    }
+}
+
+// Bubble Sortg
+void bubbleSort (int arr[], int size){
+    for (int j = 0; j < size; j++){
+        for (int i = 0; i < size-j-1;i++){
+            if (arr[i] > arr[i+1]){
+                int tmp = arr[i];
+                arr[i] = arr[i+1];
+                arr[i+1] = tmp;
+            }
+        }
+    }
+}
+
+// Insertion Sort
+void insertionSort (int arr[], int size){  
+    for (int i = 1; i < size; i++) {
+        int hold = arr[i];
+        while (i>0 && hold<arr[i-1]){
+            arr[i] = arr[i-1];
+            i--;
+        }
+        arr[i] = hold;
     }
 }
 
